@@ -27,5 +27,14 @@
 	echo "Hello $first_name ! Your job is to be $roles[$role]";
 
 
+// == IS EQUAL TO
+// != IS NOT EQUAL TO
+// < LESS THAN
+// > GREATER THAN
+// <= LESS THAN OR EQUAL TO
+// >=  GREATER THAN OR EQUAL TO
+// !  NOT
+// && AND
+// || OR
 
  ?>
