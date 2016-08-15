@@ -8,24 +8,21 @@ class Bike
 
 	// __construct function or 'class constructors' executes when you create an instance of its class
 	// it can also accept parameters in which you can put values into when you create an instance of its class
-	public function __construct($price, $max_speed)
-	{
+	public function __construct($price, $max_speed){
 		$this->price = $price;
 		$this->max_speed = $max_speed;
 		$this->miles = 0;
 	}
 
 	// displays class attribute's value/info
-	public function displayInfo()
-	{
+	public function displayInfo(){
 		echo "<br />Price: " . $this->price.
 			"<br />Max Speed: " . $this->max_speed.
 			"<br />Miles: " . $this->miles ."<br />";
 	}
 
 	// adds the miles by 10
-	public function drive()
-	{
+	public function drive(){
 		echo "<br />Driving!";
 		$this->miles = $this->miles + 10;
 
@@ -34,25 +31,22 @@ class Bike
 	}
 
 	// subtracts the miles by 5
-	public function reverse()
-	{
+	public function reverse(){
 		echo "<br />Reversing!";
 		$this->miles = $this->miles - 5;
 
 		// prevent negative miles
-		if($this->miles < 0)
-		{
+		if($this->miles < 0){
 			// if miles is less than 0, we set it back to 0
 			$this->miles = 0;
 		}
-
 		// we need to add "return $this" to allow chaining
 		return $this;
 	}
 }
 
 // Instantiating 3 new bikes
-$bike1 = new Bike(200, "25mpg");
+$bike1 = new Bike(200, "25mph");
 // create first instance of the class Bike and run functions
 $bike1 = new Bike(200, '60 mph');
 $bike1->drive()->drive()->drive()->reverse()->displayInfo();
