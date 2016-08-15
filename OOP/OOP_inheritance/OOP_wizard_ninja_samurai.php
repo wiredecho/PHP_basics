@@ -20,6 +20,11 @@ class Samurai extends Human{
         $this->health -= 5;
         $this->strength += 10;
     }
+    
+    public function trashTalk(){
+    	// sample of how you can overwrite Human trashtalk
+        echo "The flower that blooms in adversity is the most beautiful of all";
+    }
 }
 
 // creating an instance of Wizard, Ninja and Samurai
@@ -45,3 +50,4 @@ echo $rain->stealth . "<br />";
 $tom->sacrifice() . "<br />";
 echo $tom->health . "<br />";
 echo $tom->strength . "<br />";
+echo $tom->trashtalk();
