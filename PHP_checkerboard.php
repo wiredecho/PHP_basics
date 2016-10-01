@@ -14,22 +14,20 @@
 
 
 		<style type="text/css">
-			td{
-				padding: 10px;
-				margin:10px;
-				color:orange;
-			}
+			
 
-			#black{
+			.black{
 				background-color: black;
 				width:25px;
 				height:25px;
+				display:inline-block;
 			}
 
-			#red{
+			.red{
 				background-color:red;
 				width:25px;
 				height:25px;
+				display:inline-block;
 			}
 
 		</style>
@@ -38,29 +36,43 @@
 	<body>
 
 
-
+	<div class="container">
 
 	<?php 
-	$rows = 12; // amount of table rows
-	$cols = 12;// amount of table columns
 
 
 
-	for($tr=1;$tr<=$rows;$tr++){ 
-	     
+		for($tr=1;$tr<=8;$tr++){ 
+		     
 
-	        for($td=1;$td<=$cols;$td++){ 
+	    	if($tr%2!=0){ 
 
 	        	echo "<div class='red'></div>";
-	        	echo "<div class='black'></div>";  
-	               	//where multiplication happens
-	        
-	        } 
-	
-	} 
+	        	echo "<div class='black'></div>";
+	        	echo "<div class='red'></div>";
+	        	echo "<div class='black'></div>";
+	        	echo "<div class='red'></div>";
+	        	echo "<div class='black'> </div>";
+	        	echo "<div class='red'></div>";
+	        	echo "<div class='black'></div>";
+	         
+	        }else{
+	        	echo "<div class='black'></div>";
+	        	echo "<div class='red'></div>";
+	        	echo "<div class='black'></div>";
+	        	echo "<div class='red'></div>";
+	        	echo "<div class='black'></div>";
+	        	echo "<div class='red'></div>";
+	        	echo "<div class='black'></div>";
+	        	echo "<div class='red'></div>";
+
+	        }
+	        echo "<br/>";
+		} 
 
 
 	?>
+	</div>
 
 
 	</body>

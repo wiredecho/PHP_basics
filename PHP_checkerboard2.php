@@ -1,7 +1,7 @@
 <!doctype <!DOCTYPE html>
 <html>
 	<head>
-		<title>Multiplication Table</title>
+		<title>Checkerboard</title>
 		<!-- bootstrap -->
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -14,22 +14,20 @@
 
 
 		<style type="text/css">
-			td{
-				padding: 10px;
-				margin:10px;
-				color:orange;
-			}
+			
 
-			#black{
+			.black{
 				background-color: black;
 				width:25px;
 				height:25px;
+		
 			}
 
-			#red{
+			.red{
 				background-color:red;
 				width:25px;
 				height:25px;
+
 			}
 
 		</style>
@@ -38,29 +36,34 @@
 	<body>
 
 
+	<div class="container">
 
+		<table>
+			<tbody>
 
-	<?php 
-	$rows = 12; // amount of table rows
-	$cols = 12;// amount of table columns
+		<?php 
 
+				for($tr=0;$tr<=8;$tr++){ 
+				     echo"<tr>";
 
+				     for($col=0;$col<=8;$col++){
 
-	for($tr=1;$tr<=$rows;$tr++){ 
-	     
+				    	if($col%2 == $tr%2){ 
 
-	        for($td=1;$td<=$cols;$td++){ 
-
-	        	echo "<div class='red'></div>";
-	        	echo "<div class='black'></div>";  
-	               	//where multiplication happens
-	        
-	        } 
-	
-	} 
-
-
-	?>
+				        	echo "<td class='red'></td>";
+				        	
+				         
+				        }else{
+				        	echo "<td class='black'></td>";
+				        	
+				        }
+				   	}
+			        echo "</tr>";
+				} 
+			?>
+			</tbody>
+		</table>
+	</div>
 
 
 	</body>
