@@ -32,8 +32,8 @@
 
 
 	<?php 
-	$rows = 12; // amount of table rows
-	$cols = 12;// amount of table columns
+	$rows = 100; // amount of table rows
+	$cols = 100;// amount of table columns
 
 	echo "<table border='1'>"; 
 
