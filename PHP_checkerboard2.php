@@ -50,7 +50,7 @@
 
 				    	if($col%2 == $tr%2){ 
 
-				        	echo "<td class='red'></td>";
+				        	echo "td class='red'></td";
 				        	
 				         
 				        }else{
