@@ -17,8 +17,10 @@
 	<script>
 		function flip() {
     		$('.card').toggleClass('flipped');
-    		$i=rand(0,10);
-			$j=rand(0,10);
+
+		}
+		function random(){
+			$i=rand(0,10)
 		}
 
 		
@@ -33,7 +35,8 @@
 			
 			$card = array("blue_eyes.jpg","celtic_guard.jpg","Hedgehog.png","kuriboh.png","monster_tamer.png","shark.png","time_wizard.jpg","gagagigo.jpg","dark_magician.jpg","maneater_bug.jpg","clock_resonator.png","monster_egg.jpg");
 
-			
+			$i=rand(0,10);
+			$j=rand(0,10);
 		?>
 		
 				<button onclick="flip()">flip the card</button>
